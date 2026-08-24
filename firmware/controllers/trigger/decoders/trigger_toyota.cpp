@@ -99,8 +99,10 @@ void initialize_3GRfSE_CAM(TriggerWaveform* s) {
 
     // Fall-to-fall: 145°, 65°, 150°
     // 65 / 145 = 0.4483
-    s->setTriggerSynchronizationGap3(/*gapIndex*/0, /*from*/1.1, 3.0);
-	  s->setTriggerSynchronizationGap3(/*gapIndex*/1, /*from*/0.24, 0.9);
+    //s->setTriggerSynchronizationGap3(/*gapIndex*/0, /*from*/1.1, 3.0);
+	  //s->setTriggerSynchronizationGap3(/*gapIndex*/1, /*from*/0.24, 0.9);
+
+    s->setTriggerSynchronizationGap(/*from*/0.30f, /*to*/0.65f);
 
     // Все углы повернуты на +80°, чтобы последний FALL был ровно на 360°.
     s->addEvent360(90,  TriggerValue::RISE, TriggerWheel::T_PRIMARY);
